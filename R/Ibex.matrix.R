@@ -75,6 +75,8 @@ Ibex.matrix <- function(input.data,
                         species = "Human",
                         verbose = TRUE) {
   
+  cat("--- Running AKN patched version of Ibex.matrix ---\n")
+
   # Match arguments for better validation
   chain <- match.arg(chain)
   method <- match.arg(method)
@@ -91,7 +93,7 @@ Ibex.matrix <- function(input.data,
   loci <- if (chain == "Heavy") "IGH" else c("IGK", "IGL")
   
   #Getting Sequences
-  BCR <- getIR(input.data, chain, sequence.type = "aa")[[1]]
+  BCR <- getIR(input.data, chain, sequence.type = "aa")
   BCR <- BCR[complete.cases(BCR[,2]), ]
   
   # Determine dictionary for sequence encoding
