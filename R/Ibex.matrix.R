@@ -136,10 +136,12 @@ Ibex.matrix <- function(input.data,
                                                    sequence.dictionary = seq.dict,
                                                    padding.symbol = ".")
         } else {
-          encoded.values <- immApex::propertyEncoder(sequences, 
-                                                     max.length = max.len,
-                                                     method.to.use = enc.input,
-                                                     convert.to.matrix = TRUE)
+          encoded.values <- immApex::propertyEncoder(
+            sequences,
+            max.length = max.len,
+            property.set = enc.input,
+            convert.to.matrix = TRUE
+          )
         }
         
         # 2. Load model and predict
