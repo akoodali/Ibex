@@ -79,7 +79,7 @@ runIbex <- function(sc.data,
                              geometric.theta = geometric.theta, 
                              species = species,
                              verbose = verbose)
-    BCR <- getIR(sc.data, chain, sequence.type = "aa")[[1]]
+    # BCR <- getIR(sc.data, chain, sequence.type = "aa")[[1]]
     sc.data <- adding.DR(sc.data, reduction, reduction.name)
     return(sc.data)
 }
